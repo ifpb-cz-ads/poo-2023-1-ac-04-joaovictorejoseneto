@@ -158,5 +158,5 @@ Classe TesteDatas()
 * E por último o System.out está errado também, por erro de formatação.
 
 Classe TesteObjetos() 
-* Um primeiro erro a ser discutido é que na classe TesteObjetos é que também não foi importado a biblioteca LocalDate.
+* Um primeiro erro a ser discutido é que na classe TesteObjetos também não foi importado a biblioteca LocalDate.
 * Outro erro é que os objetos "a e b" estão sendo instanciados de forma errada, já que a palavra "Data" não tem referência para nada.
