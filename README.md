@@ -113,3 +113,50 @@ TesteImpressao.java:7: error: illegal character: '\u201d'
 * Um primeiro erro a ser falado é que metódo main está declarado de forma errada, no qual deveriar está no seguinte modelo "public static void main(String[] args).
 * Outro erro é na utilização do System.out, onde está sendo passado apostófos ao invés de aspas duplas, ou seja, um erro de formatação.
 * E por último, o erro do return no meio do código, ele não está no escopo de nenhum método, o que não faz sentido ele está isolado retornando algo.
+
+# Questão 10
+
+```
+class TesteDatas{
+    public void static main(String[] args){
+        Data2 hoje = new Data2();
+        hoje.inicializaData(7,1,2001);
+        Data2 amanha;
+        amanha.inicializaData(8,1,2001);
+        System.out.println(amanha.eIgual(hoje));}
+}
+ 
+
+class TesteObjetos{
+    public static void main(String[] args){
+        Data a;
+        Data b = new Data();
+        b = null;
+        b = a;
+    }
+}
+```
+Ao executar a classe acima é retornado um erro no terminal:
+
+```
+TesteObjetos.java:2: error: <identifier> expected
+    public void static main(String[] args){
+               ^
+TesteObjetos.java:2: error: '(' expected
+    public void static main(String[] args){
+                ^
+TesteObjetos.java:2: error: invalid method declaration; return type required
+    public void static main(String[] args){
+                       ^
+3 errors
+```
+Classe TesteDatas() 
+
+* Um primeiro erro a ser discutido é que na classe TesteDatas, o metódo main está declarado de forma errada.
+* Outro erro é que não foi importado a biblioteca de datas (import java.time.LocalDate) e também foi declarado o objeto de forma errada, que deveria ser LocalDate hoje = new LocalDate();
+* Além disso o objeto "amanha" foi instanciado de forma errada também.
+* E por último o System.out está errado também, por erro de formatação.
+
+Classe TesteObjetos() 
+* Um primeiro erro a ser discutido é que na classe TesteObjetos é que também não foi importado a biblioteca LocalDate.
+* Outro erro é que os objetos "a e b" estão sendo instanciados de forma errada, já que a palavra "Data" não tem referência para nada.
