@@ -63,3 +63,53 @@ Teste2.java:14: error: incompatible types: unexpected return value
 * Um primeiro erro a ser falado é que o metódo "int maior()" foi criado para retornar um inteiro e no escopo do metódo está sendo passado para o return um valor booleano.
 * Em ambos os metódos, faltou colocar as chaves das condicionais.
 * No segundo metódo é definido que ele não dever retornar nada, por causa void, porém no escopo do metódo está sendo usado o return para retornar um valor inteiro.
+
+# Questão 09
+
+```
+class TesteImpressao{
+    main(String[] args){
+
+    System.out.println(“7+2=”+(7+2));
+    System.out.println(“7-2=”+(7-2));
+    System.out.println(“7*2=”+(7*2));
+    System.out.println(“7/2=”+(7/2));
+    return true;
+    }
+} 
+```
+Ao executar a classe acima é retornado um erro no terminal:
+
+```
+TesteImpressao.java:2: error: invalid method declaration; return type required
+    main(String[] args){
+    ^
+TesteImpressao.java:4: error: illegal character: '\u201c'
+    System.out.println(“7+2=”+(7+2));
+                       ^
+TesteImpressao.java:4: error: illegal character: '\u201d'
+    System.out.println(“7+2=”+(7+2));
+                            ^
+TesteImpressao.java:5: error: illegal character: '\u201c'
+    System.out.println(“7-2=”+(7-2));
+                       ^
+TesteImpressao.java:5: error: illegal character: '\u201d'
+    System.out.println(“7-2=”+(7-2));
+                            ^
+TesteImpressao.java:6: error: illegal character: '\u201c'
+    System.out.println(“7*2=”+(7*2));
+                       ^
+TesteImpressao.java:6: error: illegal character: '\u201d'
+    System.out.println(“7*2=”+(7*2));
+                            ^
+TesteImpressao.java:7: error: illegal character: '\u201c'
+    System.out.println(“7/2=”+(7/2));
+                       ^
+TesteImpressao.java:7: error: illegal character: '\u201d'
+    System.out.println(“7/2=”+(7/2));
+                            ^
+9 errors
+```
+* Um primeiro erro a ser falado é que metódo main está declarado de forma errada, no qual deveriar está no seguinte modelo "public static void main(String[] args).
+* Outro erro é na utilização do System.out, onde está sendo passado apostófos ao invés de aspas duplas, ou seja, um erro de formatação.
+* E por último, o erro do return no meio do código, ele não está no escopo de nenhum método, o que não faz sentido ele está isolado retornando algo.
